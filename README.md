@@ -100,28 +100,6 @@ List required dependencies or major libraries:
 
 ---
 
-## Installation️ & Setup
-1. Clone the repo and install dependencies:
-
-```bash
-git clone https://github.com/niloy-debnath/event-tracker
-cd event-tracker
-npm install
-
-```
-
-2. Set up environment variables by creating a `.env` file in the root directory:
-
-```env
-DATABASE_URL=your_database_url
-JWT_SECRET=your_jwt_secret
-```
-
-3. Run the application:
-
-```bash
-npm run dev
-```
 
 ---
 
