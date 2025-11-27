@@ -25,7 +25,7 @@ export default function Donors() {
   useEffect(() => {
     const getDonors = async () => {
       try {
-        const res = await fetch("http://localhost:7000/donors");
+        const res = await fetch("https://amar-rokto-server.vercel.app/donors");
         const data = await res.json();
         setDonors(data);
         setLoading(false);

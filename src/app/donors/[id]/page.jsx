@@ -12,7 +12,9 @@ export default function DonorDetailsPage() {
   useEffect(() => {
     if (!id) return;
 
-    fetch(`http://localhost:7000/donors/${id}`, { cache: "no-store" })
+    fetch(`https://amar-rokto-server.vercel.app/donors/${id}`, {
+      cache: "no-store",
+    })
       .then((res) => {
         if (!res.ok) throw new Error("Donor not found");
         return res.json();

@@ -140,7 +140,7 @@ export default function Navbar() {
           <Link href="/donors" className={`block ${active("/donors")}`}>
             Donors
           </Link>
-          <Link href="/be-a-donor" className={`block ${active("/be-a-donor")}`}>
+          <Link href="/beadonor" className={`block ${active("/be-a-donor")}`}>
             Be a Donor
           </Link>
           <Link href="/about" className={`block ${active("/about")}`}>
