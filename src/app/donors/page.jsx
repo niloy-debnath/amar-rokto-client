@@ -23,7 +23,7 @@ export default function Donors() {
   const [currentPage, setCurrentPage] = useState(1);
   const [showAll, setShowAll] = useState(false);
 
-  // ============= FETCH donors from backend =============
+  // ============= FETCH donors from backend ============
   useEffect(() => {
     const getDonors = async () => {
       try {
@@ -45,8 +45,10 @@ export default function Donors() {
     if (!search) {
       setFilteredDonors(donors);
     } else {
-      const filtered = donors.filter((d) =>
-        d.bloodGroup.toLowerCase().includes(search.toLowerCase())
+      const filtered = donors.filter(
+        (d) =>
+          d.bloodGroup.toLowerCase().includes(search.toLowerCase()) ||
+          d.name.toLowerCase().includes(search.toLowerCase())
       );
       setFilteredDonors(filtered);
     }
@@ -83,7 +85,7 @@ export default function Donors() {
         <div className="flex justify-center mb-10">
           <input
             type="text"
-            placeholder="Search by blood group (e.g., A+, B-)"
+            placeholder="Search by name or blood group (e.g., John, A+)"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             className="px-4 py-2 border rounded-lg w-full max-w-md focus:outline-none focus:ring-2 focus:ring-red-600"
