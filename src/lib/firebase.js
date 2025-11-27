@@ -1,0 +1,18 @@
+// firebase.js
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+
+const firebaseConfig = {
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_SENDER,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APPID,
+};
+
+export const app = initializeApp(firebaseConfig);
+
+export const auth = getAuth(app);
+
+export default app;
