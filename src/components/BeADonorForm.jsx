@@ -47,7 +47,7 @@ export default function BeADonorForm() {
     setMessage("");
 
     try {
-      const res = await fetch("http://localhost:7000/donors", {
+      const res = await fetch("https://amar-rokto-server.vercel.app/donors", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
