@@ -108,7 +108,7 @@ List required dependencies or major libraries:
 
 ---
 
-## Contributions (Optional)
+## Contributions 
 If this is a team project, mention contributors.
 
 | Name            | Role                | Contributions                            |  
